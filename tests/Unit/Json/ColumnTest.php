@@ -20,9 +20,11 @@ class ColumnTest extends TestCase
     ): void {
         $column1 = new Column();
         $column1->setPath($path1);
+        /** @var mixed[]|int|null $iterators1 */
         $column1->setIterators($iterators1);
         $column2 = new Column();
         $column2->setPath($path2);
+        /** @var mixed[]|int|null $iterators2 */
         $column2->setIterators($iterators2);
 
         $this->expectException(Exception::class);

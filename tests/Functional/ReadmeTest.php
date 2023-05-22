@@ -99,7 +99,7 @@ class ReadmeTest extends TestCase
         );
     }
 
-    public function testReadmeExampleCsvNoHeader()
+    public function testReadmeExampleCsvNoHeader(): void
     {
         $mappings = [
             "items" => "$[0]",
@@ -124,7 +124,7 @@ item3,30,2020-01-01';
         );
     }
 
-    public function testReadmeExampleCsvWithHeader()
+    public function testReadmeExampleCsvWithHeader(): void
     {
         $mappings = [
             "items" => "$[item]",
