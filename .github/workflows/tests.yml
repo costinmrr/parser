@@ -1,0 +1,30 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Composer install
+        run: composer install
+
+      - name: Run PHPStan
+        run: |
+          ./vendor/bin/phpstan analyse src tests --level 9
+
+      - name: Run PhpUnit tests
+        run: |
+          ./vendor/bin/phpunit --testdox --colors=always --do-not-cache-result -c phpunit.xml
