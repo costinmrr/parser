@@ -27,4 +27,4 @@ jobs:
 
       - name: Run PhpUnit tests
         run: |
-          ./vendor/bin/phpunit -d memory_limit=256MB --testdox --colors=always
+          ./vendor/bin/phpunit --testdox --colors=always --do-not-cache-result -c phpunit.xml
