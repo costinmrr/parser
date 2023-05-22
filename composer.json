@@ -1,0 +1,41 @@
+{
+    "name": "costinmrr/parser",
+    "type": "library",
+    "description": "A simple parser to convert json/xml/csv to an array with known columns",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Costin Moraru",
+            "email": "admin@costinmrr.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "galbar/jsonpath": "^2.0",
+        "illuminate/support": "^10.0",
+        "ext-simplexml": "*",
+        "ext-ctype": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "slevomat/coding-standard": "^8.0",
+        "squizlabs/php_codesniffer": "^3.2",
+        "phpstan/phpstan": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Costinmrr\\Parser\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Costinmrr\\Parser\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "kylekatarnls/update-helper": false
+        }
+    }
+}
